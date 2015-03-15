@@ -5,5 +5,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_oauth">OAuthActivity</string>
+    <string name="title_activity_image_show_activty">ImageShowActivty</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_select_image">SelectImageActivity</string>
+    <string name="title_activity_pic_description">PicDescription</string>
 
 </resources>

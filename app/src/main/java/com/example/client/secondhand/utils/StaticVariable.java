@@ -17,4 +17,8 @@ public final class StaticVariable {
         public static final String KEY_RESPONSE_TYPE = "response_type";
         public static final String KEY_GRANT_TYPE = "grant_type";
     }
+
+    public static final class Debug{
+        public static final boolean isDebug = true;
+    }
 }

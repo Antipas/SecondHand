@@ -1,5 +1,6 @@
 package com.example.client.secondhand.application;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,19 +17,23 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Created by client on 15/3/9.
+ * Created by Lyn on 15/3/9.
  */
 public class SHApplication extends Application {
 
     public static ImageLoader imageLoader;
     static DisplayImageOptions options;
-    public static int []screenWH = new int[2];
-
+//    public static int []screenWH = new int[2];
+    public static List<Activity> activityArrayList = new ArrayList<Activity>();;
     @Override
     public void onCreate() {
         super.onCreate();
-        screenWH = getScreenHW(getApplicationContext());
+//        screenWH = getScreenHW(getApplicationContext());
+
 
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
                 .threadPoolSize(5)

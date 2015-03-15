@@ -19,6 +19,16 @@ public class AsyncHttpIc {
     private static AsyncHttpClient client = new AsyncHttpClient();
 
     /**
+     * get 无参数
+     * @param url
+     * @param responseHandler
+     */
+    public static void get(String url,AsyncHttpResponseHandler responseHandler){
+        client.get(getAbsoluteUrl(url), responseHandler);
+    }
+
+
+    /**
      * get方式
      *
      * @param url             访问的地址

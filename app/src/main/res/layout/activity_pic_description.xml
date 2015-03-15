@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.client.secondhand.PicDescriptionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="讲讲宝贝的故事吧"
+        android:id="@+id/txt_pic"
+        android:textSize="20sp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+    />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="给你的宝贝编个标题"
+        android:id="@+id/et_title"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/txt_pic"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="描述一下你的宝贝"
+        android:id="@+id/et_content"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/et_title"
+        android:gravity="top|left"
+        android:background="@null"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/et_price"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_price"
+        android:numeric="integer"
+        android:textColor="@android:color/black"
+        android:hint="开个价吧，少年"
+        android:layout_above="@+id/rl_kinds"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/middle_grey"
+        android:id="@+id/rl_kinds"
+        android:layout_above="@+id/rl_xq"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:onClick="rl_kindsOnClick"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_kind"
+            android:textColor="@color/grey"
+            android:text="分类:"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aliuser_account_arrow_down"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/middle_grey"
+        android:id="@+id/rl_xq"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+
+        android:onClick="rl_xqOnClick"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:id="@+id/tv_xq"
+            android:text="校区:"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aliuser_account_arrow_down"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/ll_btn"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="backOnClick"
+            android:text="上一步"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_red_light"
+            android:text="下一步"
+            android:onClick="nextOnClick"/>
+
+
+        </LinearLayout>
+</RelativeLayout>
